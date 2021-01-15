@@ -2,7 +2,11 @@
 
 # create database
 read -p "Give database name: " dbname
-[ -z $dbname ] && echo "dbname cannot be empty" && exit 1
+if [ -z $dbname ] 
+then
+    echo "dbname cannot be empty"
+    exit 1
+fi
 CREATE="create database \"$dbname\";"
 
 # disallow everyone accessing it. This should be unnecessary if 
