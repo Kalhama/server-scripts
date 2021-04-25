@@ -27,4 +27,4 @@ USER="create user \\\"$username\\\" with encrypted password '$password';"
 GRANT="grant all privileges on database \\\"$username\\\" to \\\"$username\\\";"
 
 echo "Next run"
-echo "psql -c \"$CREATE $PERMISSIONS $USER $GRANT\""
+echo "psql -c \"$CREATE\" -c \"$PERMISSIONS $USER $GRANT\""
